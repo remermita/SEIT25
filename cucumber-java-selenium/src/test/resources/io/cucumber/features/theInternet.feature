@@ -5,7 +5,7 @@ Feature: The Internet
   Scenario: Homepage has a list of links to Expected examples
     Given the page under test is 'https://the-internet.herokuapp.com'
     And the user views the list of links
-    Then the expected list should contain only the following
+    Then the expected list should contain only the following:
 
 
 #
