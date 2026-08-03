@@ -1,4 +1,4 @@
-package io.cucumber.core;
+package io.cucumber.utils;
 
 import java.util.HashMap;
 import org.openqa.selenium.chrome.ChromeDriver;

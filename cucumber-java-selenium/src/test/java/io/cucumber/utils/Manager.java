@@ -1,6 +1,8 @@
-package io.cucumber.core;
+package io.cucumber.utils;
 
 import java.util.HashMap;
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Manager {

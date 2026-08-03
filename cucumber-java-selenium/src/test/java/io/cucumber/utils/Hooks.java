@@ -1,4 +1,4 @@
-package io.cucumber.core;
+package io.cucumber.utils;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
@@ -29,17 +29,17 @@ public class Hooks extends Context {
     System.out.println("Made driver");
   }
 
-  @BeforeStep
-  public void beforeStep() {
-    System.out.println("Starting step..............................");
-  }
+//  @BeforeStep
+//  public void beforeStep() {
+//    System.out.println("Starting step..............................");
+//  }
 
-  @AfterStep
-  public void afterStep(Scenario scenario) {
-    byte[] screenshot = getDriver().getScreenshotAs(OutputType.BYTES);
-    scenario.attach(screenshot, "image/png", "A Nice Screenshot.");
-    System.out.println("End of step................................");
-  }
+//  @AfterStep
+//  public void afterStep(Scenario scenario) {
+//    byte[] screenshot = getDriver().getScreenshotAs(OutputType.BYTES);
+//    scenario.attach(screenshot, "image/png", "A Nice Screenshot.");
+//    System.out.println("End of step................................");
+//  }
 
   @After
   public void after() {

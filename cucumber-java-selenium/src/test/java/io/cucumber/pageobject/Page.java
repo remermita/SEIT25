@@ -1,4 +1,4 @@
-package io.cucumber.pages;
+package io.cucumber.pageobject;
 
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import java.time.Duration;

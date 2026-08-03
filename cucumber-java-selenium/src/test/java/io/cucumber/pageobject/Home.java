@@ -1,8 +1,11 @@
-package io.cucumber.pages;
+package io.cucumber.pageobject;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.Collections;
+import java.util.List;
 
 public class Home extends Page {
 
@@ -13,6 +16,8 @@ public class Home extends Page {
 
   @FindBy(css = "h1")
   private WebElement title;
+  @FindBy(xpath = "//div[@id='content']/ul/li/a")
+  private List<WebElement> exampleLinks;
 
   public WebElement getTitle() {
     return title;
@@ -21,5 +26,9 @@ public class Home extends Page {
   public void refresh() {
     driver.navigate().refresh();
     System.out.println("Refreshed page");
+  }
+
+  public List<WebElement> getExampleLinks() {
+    return exampleLinks;
   }
 }

@@ -1,8 +1,8 @@
-package io.cucumber.glue;
+package io.cucumber.stepdefinition;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.core.Context;
-import io.cucumber.core.Manager;
+import io.cucumber.utils.Context;
+import io.cucumber.utils.Manager;
 
 public class Navigation extends Context {
 
