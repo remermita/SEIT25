@@ -21,7 +21,7 @@ public class BasicAuthSteps extends Context {
         super(manager);
     }
 
-    @When("the 'Basic Auth' example is opened")
+    @When("the 'Basic Auth' example is clicked and opened")
     public void clickBasicAuthLink() throws InterruptedException {
         WebElement link = driver.findElement(By.xpath("//*[@id='content']/ul/li[3]/a"));
         link.click();
@@ -30,7 +30,7 @@ public class BasicAuthSteps extends Context {
     }
 
 
-    @And("valid credentials are supplied")
+    @And("valid credentials are entered")
     public void typeUserPass() throws AWTException {
         Robot robot = new Robot();
         basicAuth.typeString(robot, "admin");
@@ -42,7 +42,7 @@ public class BasicAuthSteps extends Context {
         System.out.println(driver.getCurrentUrl());
     }
 
-    @Then("Congratulations should be displayed")
+    @Then("Congratulations text should be displayed")
     public void validatedAccess() {
         WebElement congratsText = driver.findElement(By.xpath("//*[@id='content']/div/p"));
         Assert.assertTrue(congratsText.getText(), true);
