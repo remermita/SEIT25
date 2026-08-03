@@ -4,11 +4,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.pageobject.BasicAuth;
-import io.cucumber.pageobject.Home;
 import io.cucumber.utils.Context;
 import io.cucumber.utils.Manager;
 import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -17,7 +15,6 @@ import java.awt.event.KeyEvent;
 
 public class BasicAuthSteps extends Context {
     WebDriver driver = manager.getDriver();
-    Home home = new Home((ChromeDriver) driver);
     BasicAuth basicAuth = new BasicAuth((ChromeDriver) driver);
 
     public BasicAuthSteps(Manager manager) {
@@ -26,7 +23,7 @@ public class BasicAuthSteps extends Context {
 
     @When("the 'Basic Auth' example is opened")
     public void clickBasicAuthLink() throws InterruptedException {
-        WebElement link = driver.findElement(By.xpath("//*[@id=\"content\"]/ul/li[3]/a"));
+        WebElement link = driver.findElement(By.xpath("//*[@id='content']/ul/li[3]/a"));
         link.click();
         Thread.sleep(3000);
         driver.get("https://the-internet.herokuapp.com/basic_auth");

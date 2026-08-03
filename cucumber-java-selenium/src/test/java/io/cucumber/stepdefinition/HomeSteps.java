@@ -1,7 +1,6 @@
 package io.cucumber.stepdefinition;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.pageobject.Home;
 import io.cucumber.utils.Context;
@@ -76,7 +75,7 @@ public class HomeSteps extends Context {
     System.out.println(linkTexts);
   }
 
-  @Then("the expected list should contain only the following")
+  @Then("the expected list should contain only the following:")
     public void verifyListOfLinks() {
       System.out.println(expectedList.size());
       System.out.println("Expected Links" + expectedList);
