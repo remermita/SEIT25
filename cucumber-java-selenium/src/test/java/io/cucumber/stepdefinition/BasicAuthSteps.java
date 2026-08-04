@@ -29,7 +29,6 @@ public class BasicAuthSteps extends Context {
         driver.get("https://the-internet.herokuapp.com/basic_auth");
     }
 
-
     @And("valid credentials are entered")
     public void typeUserPass() throws AWTException {
         Robot robot = new Robot();
@@ -43,7 +42,7 @@ public class BasicAuthSteps extends Context {
     }
 
     @Then("Congratulations text should be displayed")
-    public void validatedAccess() {
+    public void validateAccess() {
         WebElement congratsText = driver.findElement(By.xpath("//*[@id='content']/div/p"));
         Assert.assertTrue(congratsText.getText(), true);
         System.out.println(congratsText.getText());
