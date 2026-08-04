@@ -41,7 +41,7 @@ public class BasicAuthSteps extends Context {
         System.out.println(driver.getCurrentUrl());
     }
 
-    @Then("Congratulations text should be displayed")
+    @Then("Congratulations message should be displayed")
     public void validateAccess() {
         WebElement congratsText = driver.findElement(By.xpath("//*[@id='content']/div/p"));
         Assert.assertTrue(congratsText.getText(), true);

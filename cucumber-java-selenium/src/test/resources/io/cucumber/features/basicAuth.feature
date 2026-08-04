@@ -6,4 +6,4 @@ Feature: Basic Authentication
     Given the page under test is 'https://the-internet.herokuapp.com'
     When the 'Basic Auth' example is clicked and opened
     And valid credentials are entered
-    Then Congratulations text should be displayed
+    Then Congratulations message should be displayed
